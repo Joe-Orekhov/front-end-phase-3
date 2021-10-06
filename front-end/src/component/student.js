@@ -1,10 +1,19 @@
-import Navebar from "./navBar";
+// import { BrowserRouter, Route} from 'react-router-dom'
+// import StudentNavBar from './StudentNavBar'
+// import StudentSchedule from './StudentSchedule'
+// import StudentProfile from './StudentProfile'
+// import TutorContainer from './TutorContainer'
 
 function Student() {
   return(
     <div>
-      <h1>Student</h1>
-      <Navebar />
+      <p>Hey Student</p>
+      {/* <BrowserRouter>
+        <StudentNavBar />
+        <Route exact path="/student/schedule"><StudentSchedule /></Route>
+        <Route exact path="/student/profile"><StudentProfile /></Route>
+        <Route exact path="/student/tutor_list"><TutorContainer /></Route>
+      </BrowserRouter> */}
     </div>
   )
 }

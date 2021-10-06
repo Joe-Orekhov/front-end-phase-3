@@ -1,11 +1,13 @@
+import React from "react"
+import { Link } from 'react-router-dom'
 
-function Login({ setUsertype }) {
+function Login() {
 
   return(
     <div>
       <h1>LOGIN</h1>
-      <button onClick={() => setUsertype(3)}>Student</button>
-      <button onClick={() => setUsertype(2)}>Tutor</button>
+      <h3>Tutor Log In</h3>
+      <Link to="/tutor/schedule"><button>Test</button></Link>
     </div>
   )
 }
