@@ -1,28 +1,29 @@
-import Profile from "./profile"
-import Requests from "./requests"
-import Schedule from "./schedule"
-import { Switch, Link, Route, BrowserRouter } from 'react-router-dom'
 
-function Navebar() {
+
+function Navebar({ usertype }) {
+
+  function DisplayNavBar(){
+    if (usertype === 0){
+      return(
+        <h1> NO_ONE</h1>
+      )
+    }else if (usertype === 2) {
+      return(
+        <h1> TUTOR</h1>
+      )
+    } else {
+      return(
+        <h1> STUDENT</h1>
+      )
+    }
+  }
+
+
   return(
     <div>
       <h2>Navebar</h2>
-      <BrowserRouter>
-        <button><Link to='/profile'>Profile</Link></button>
-        <button><Link to='/requests'>Requests</Link></button>
-        <button><Link to='/schedule'>Schedule</Link></button>
-        <Switch>
-          <Route path='/profile'>
-            <Profile />
-          </Route >
-          <Route path='/requests'>
-            <Requests />
-          </Route >
-          <Route path='/schedule'>
-            <Schedule />
-          </Route >
-        </Switch>
-      </BrowserRouter>
+      <DisplayNavBar />
+  
     </div>
   )
 }
