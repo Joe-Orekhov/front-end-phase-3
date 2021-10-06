@@ -6,9 +6,9 @@ function Login() {
     <div>
       <h1>LOGIN</h1>
       <h3>Tutor Log In</h3>
-      <Link to="/tutor/schedule"><button>Test</button></Link>
+      <Link to="/tutor/schedule"><button>Log In</button></Link>
     </div>
   )
 }
 
-export default Login;
+export default Login
