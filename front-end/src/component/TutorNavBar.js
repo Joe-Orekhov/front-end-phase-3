@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom"
-function TutorNavBar() {
+import { Link } from 'react-router-dom'
+
+
+function TutorNavBar({ usertype }) {
+
 
   return(
     <div>
-      <h3>Welcome to Red Acorn!</h3>
-      <Link to="/tutor/schedule">Schedule</Link>
-      <Link to="/tutor/profile">Profile</Link>
-      <Link to="/tutor/requests">Student Requests</Link>
+      <h1> Tutor Nav Bar</h1>
+      <button><Link to="/tutor/schedule">tutor schedule</Link></button>
+      <button><Link to="/tutor/profile">tutor profile</Link></button>
+      <button><Link to="/tutor/requests">tutor requests</Link></button>
     </div>
   )
 }
 
 export default TutorNavBar;
-

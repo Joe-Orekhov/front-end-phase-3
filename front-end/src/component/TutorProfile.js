@@ -3,7 +3,7 @@
 function TutorProfile() {
   return(
     <div>
-      <p>Tutor Profile</p>
+      <h1>Tutor Profile</h1>
     </div>
   )
 }

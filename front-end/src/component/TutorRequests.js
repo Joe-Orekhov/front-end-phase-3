@@ -1,8 +1,9 @@
 
+
 function TutorRequests() {
   return(
     <div>
-      <p>Tutor Requests</p>
+      <h1>Tutor Requests</h1>
     </div>
   )
 }

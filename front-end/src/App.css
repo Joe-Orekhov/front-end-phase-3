@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+#tutor_navbar{
+  background-color: #00e1ff;
+}
+
+#student_navbar{
+  background-color: #ff0000;
+}
+
+#no_one_navbar{
+  background-color: #00ff15;
+}
+
