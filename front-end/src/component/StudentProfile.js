@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 
-function StudentProfile() {
+function StudentProfile({selectUserID}) {
   const [studentInfo, setStudentInfo] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:9292/students/1/profile")
+    fetch(`http://localhost:9292/students/${selectUserID}/profile`)
     .then(res => res.json())
     .then(setStudentInfo)
   }, [])

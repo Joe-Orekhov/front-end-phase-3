@@ -1,109 +1,50 @@
-
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 // import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 
-function Login({ setUsertype, usertype,}){
+function Login({handleUserID}) {
+  const [ userpass, setUserPass] = useState('')
+  const [ username, setUsername] = useState('')
+  const [ allUser,  setAllUser ] = useState([])
 
-  const [ tutorUserpass, setTutorUserpass] = useState([])
-  const [ tutorName, setTutorUsername] = useState([])
-  const [ tutorAllUser,  setTutorAllUser ] = useState([])
+
   useEffect(()=>{
-    fetch('http://localhost:9292/tutors')
+      fetch('http://localhost:9292/students')
   .then(resp => resp.json())
-  .then(t =>setTutorAllUser(t))
+  .then(t =>setAllUser(t))
   },[])
+ 
+    let allLogins = allUser.map(user => ({'username': user.username, 'password': user.password, 'id': user.id}))
 
-  const [ studentUserpass, setStudentUserPass] = useState([])
-  const [ studentname, setStudentUsername] = useState([])
-  const [ studentAllUser,  setStudentAllUser ] = useState([])
-  useEffect(()=>{
-    fetch('http://localhost:9292/students')
-  .then(resp => resp.json())
-  .then(t =>setStudentAllUser(t))
-  },[])
+    let selectUsername = allLogins.filter(thing=> thing.username === username)
+    let selectPassword = allLogins.filter(thing=> thing.password === userpass)
 
-
-  function tutorHandleSubmit (userID){
-    console.log(userID)
-  }
-  function StudentHandleSubmit (userID){
-    console.log(userID)
-  }
-
-
-  function DisplayLogin({ }){
-
-
-    if (usertype === 1){
-    
-      let tutorAllLogins = tutorAllUser.map(user => ({'username': user.username, 'password': user.password, 'id': user.id}))
-    
-      let tutorSelectUsername = tutorAllLogins.filter(user=> user.username === tutorName)
-      let tutorSelectPassword = tutorAllLogins.filter(thing=> thing.password === tutorUserpass)
-    
-      function tutorHandleSubmit(e){
+console.log(selectUsername)
+      function handleSubmit(e){
         e.preventDefault()
-    
-        if(tutorSelectPassword[0] === tutorSelectUsername[0]){
-          console.log("WINNER")
-          
+
+        if(selectUsername[0] === selectPassword[0]){
+          handleUserID(selectUsername[0].id)
+          console.log(selectUsername[0].id)
         }else{
           alert("Invalid Login")
         }
-      }
-      return(
-        <div>
-          <form onSubmit={e => tutorHandleSubmit(e)}>
-            <input id="username" name="username" onChange={(e)=>setTutorUserpass(e.target.value)}></input>
-            <input id="password" name="password" onChange={(e)=>setTutorUsername(e.target.value)}></input>
-            <button>Student Login</button>
-            </form>
-        </div>
-      )
-    }else if (usertype === 2){
 
-    
-          let allLogins = studentAllUser.map(user => ({'username': user.username, 'password': user.password, 'id': user.id}))
-    
-          let StudentSelectUsername = allLogins.filter(user=> user.username === studentname)
-          let StudentSelectPassword = allLogins.filter(thing=> thing.password === studentUserpass)
-    
-          function StudentHandleSubmit(e){
-            e.preventDefault()
-    
-            if(StudentSelectPassword[0] === StudentSelectUsername[0]){
-              console.log("WINNER")
-      
-            }else{
-              alert("Invalid Login")
-            }
-          }
-      return(
-        <div>
-          <form onSubmit={e => StudentHandleSubmit(e)}>
-          <input id="username" name="username" onChange={(e)=>setStudentUserPass(e.target.value)}></input>
-          <input id="password" name="password" onChange={(e)=>setStudentUsername(e.target.value)}></input>
-          <button>Tutor Login</button>
-          </form>
-        </div>
-      )
-    }else{
-      return <div></div>
     }
-  }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-
   return(
-    <div>
-      <h1>LOGIN</h1>
-      <div>
-        <DisplayLogin StudentHandleSubmit={StudentHandleSubmit} tutorHandleSubmit={tutorHandleSubmit}/>
-        
+    <div >
+      <h1 id="loginHeader">LOGIN</h1>
+      <div id="loginForm">
+        <form onSubmit={e => handleSubmit(e)}>
+          <input className="logFormUser" name="username" placeholder="Username" onChange={(e)=>setUsername(e.target.value)}></input><br/>
+          <input className="logFormPass" name="password" placeholder="Password" onChange={(e)=>setUserPass(e.target.value)}></input><br/>
+          <button className="logFormButt">Login</button>
+        </form>
+
       </div>
     </div>
   )
 }
 
-export default Login
+export default Login;
