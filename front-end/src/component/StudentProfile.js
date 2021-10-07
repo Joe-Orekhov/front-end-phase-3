@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
 
-function StudentProfile({selectUserID}) {
+function StudentProfile({userId}) {
   const [studentInfo, setStudentInfo] = useState([])
-
+  
   useEffect(() => {
-    fetch(`http://localhost:9292/students/${selectUserID}/profile`)
+    fetch(`http://localhost:9292/students/${userId}/profile`)
     .then(res => res.json())
     .then(setStudentInfo)
-  }, [])
+  }, userId)
 
   return(
     <div>
