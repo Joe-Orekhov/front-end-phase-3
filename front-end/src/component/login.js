@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 // import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
@@ -94,7 +95,6 @@ function Login({ setUsertype, usertype,}){
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
   return(
     <div>
       <h1>LOGIN</h1>
@@ -106,4 +106,4 @@ function Login({ setUsertype, usertype,}){
   )
 }
 
-export default Login;
+export default Login
