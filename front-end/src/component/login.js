@@ -100,8 +100,6 @@ function Login({ setUsertype, usertype,}){
       <h1>LOGIN</h1>
       <div>
         <DisplayLogin StudentHandleSubmit={StudentHandleSubmit} tutorHandleSubmit={tutorHandleSubmit}/>
-          <button onClick={() => setUsertype(1)}>Student</button>
-          <button onClick={() => setUsertype(2)}>Tutor</button>
         
       </div>
     </div>
