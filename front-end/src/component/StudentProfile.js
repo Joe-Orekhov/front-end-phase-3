@@ -13,7 +13,7 @@ function StudentProfile() {
     <div>
       <h1>My Profile</h1>
       <h2>Name: {studentInfo.name}</h2>
-      <img src={studentInfo.img} width="400" height="400" />
+      <img src={studentInfo.img} alt="studentpic" width="400" height="400" />
       <p>Grade: {studentInfo.grade}</p>
       <p>Age: {studentInfo.age}</p>
       <p>TimeZone: {studentInfo.timezone}</p>

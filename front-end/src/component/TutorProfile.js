@@ -13,7 +13,7 @@ function TutorProfile() {
     <div>
       <h1>My Profile</h1>
       <h2>Name: {tutorInfo.name}</h2>
-      <img src={tutorInfo.img} width="400" height="400" />
+      <img src={tutorInfo.img} alt="tutorpic" width="400" height="400" />
       <p>Gender: {tutorInfo.gender}</p>
       <p>Subjects: {tutorInfo.subjects}</p>
       <p>Location: {tutorInfo.location}</p>

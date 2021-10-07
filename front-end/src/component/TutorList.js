@@ -12,7 +12,7 @@ function TutorList() {
   const eachTutor = tutors.map(tutor =>
     <div>
       <h2>Name: {tutor.name}</h2>
-      <img src={tutor.img} width="400" height="400" />
+      <img src={tutor.img} alt="tutorpic" width="400" height="400" />
       <p>Gender: {tutor.gender}</p>
       <p>Subjects: {tutor.subjects}</p>
       <p>Location: {tutor.location}</p>
