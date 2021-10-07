@@ -7,9 +7,9 @@ function TutorNavBar({ usertype }) {
   return(
     <div>
       <h1> Tutor Nav Bar</h1>
-      <button><Link to="/tutor/schedule">tutor schedule</Link></button>
-      <button><Link to="/tutor/profile">tutor profile</Link></button>
-      <button><Link to="/tutor/requests">tutor requests</Link></button>
+      <button><Link to="/tutor/schedule">My Schedule</Link></button>
+      <button><Link to="/tutor/profile">My Profile</Link></button>
+      <button><Link to="/tutor/requests">Student Requests</Link></button>
     </div>
   )
 }

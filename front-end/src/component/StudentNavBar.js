@@ -7,9 +7,9 @@ function StudentNavBar({ usertype }) {
     <div>
       <h1>Student Nav Bar</h1>
 
-        <button><Link to="/student/schedule">student schedule</Link></button>
-        <button><Link to="/student/profile">student profile</Link></button>
-        <button><Link to="/student/tutorList">student tutor list</Link></button>
+        <button><Link to="/student/schedule">My Schedule</Link></button>
+        <button><Link to="/student/profile">My Profile</Link></button>
+        <button><Link to="/student/tutorList">Tutor List</Link></button>
     </div>
   )
 }
