@@ -10,13 +10,13 @@ import TutorList from './component/TutorList'
 
 // STUDENT/TUTOR NAV DOES NOT BELONG HERE, BUT IT WILL LIVE HERE FOR NOW
 import StudentNavBar from './component/StudentNavBar'
-import TutorNavBar from './component/TutorNavBar'
+// import TutorNavBar from './component/TutorNavBar'
 
 function App() {
    return (
      <div> 
       <StudentNavBar />
-      <TutorNavBar />
+      {/* <TutorNavBar /> */}
       <Switch>
         <Route exact path="/"><Login /></Route>
         <Route exact path="/tutor/schedule"><TutorSchedule /></Route>

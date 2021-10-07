@@ -9,7 +9,6 @@ function TutorSchedule() {
     .then(setMatches)
   },[])
 
-  // need to figure out how to get student names from student_id
   const eachStudent = matches.map(match =>
     <div>
       <h4>Student Name: {match.student_id}</h4>

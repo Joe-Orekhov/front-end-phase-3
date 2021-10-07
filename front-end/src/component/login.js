@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 
 
 function Login() {
-  const [usertype, setUsertype] = useState(0)
+  // const [usertype, setUsertype] = useState(0)
   const [ userpass, setUserPass] = useState('')
   const [ username, setUsername] = useState('')
   const [ allUser,  setAllUser ] = useState([])
@@ -77,8 +77,8 @@ function Login() {
         </ButtonDropdown> */}
 
         <form onSubmit={e => handleSubmit(e)}>
-          <button onClick={() => setUsertype(1)}>Student</button>
-          <button onClick={() => setUsertype(2)}>Tutor</button>
+          {/* <button onClick={() => setUsertype(1)}>Student</button>
+          <button onClick={() => setUsertype(2)}>Tutor</button> */}
           <input id="username" name="username" onChange={(e)=>setUserPass(e.target.value)}></input>
           <input id="password" name="password" onChange={(e)=>setUsername(e.target.value)}></input>
           <button>login</button>
