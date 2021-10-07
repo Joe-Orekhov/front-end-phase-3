@@ -37,15 +37,70 @@
   }
 }
 
-#tutor_navbar{
-  background-color: #00e1ff;
+#loginForm{
+  position: absolute;
+  width: 100%;
+  align-content: center;
 }
 
-#student_navbar{
-  background-color: #ff0000;
+.logFormUser{
+  position: absolute;
+  left: 50%;
+  padding: 10px; 
+  border-radius: 5px;
+}
+.logFormUser:hover{
+  background-color: rgb(240, 240, 240);
+  border-radius: 8px;
 }
 
-#no_one_navbar{
-  background-color: #00ff15;
+.logFormPass{
+  position: absolute;
+  left: 50%;
+  padding: 10px; 
+  top:40px;
+  border-radius: 5px;
+}
+.logFormPass:hover{
+  border-radius: 8px;
+  background-color: rgb(240, 240, 240);
+}
+.logFormButt{
+  position: absolute;
+  left: 50%;
+  padding: 10px; 
+  top: 80px;
+  width: 170px;
+  border-radius: 5px;
+  background-color: rgb(132, 209, 132);
+  border-style: none;
+  border-radius: 5px;
+}
+.logFormButt:hover{
+  background-color: rgb(119, 190, 119);
+  border-radius: 8px;
 }
 
+#loginHeader{
+  position: absolute;
+  left: 40%;
+  padding: 10px; 
+}
+
+
+/////////////////TUTOR CARD//////////////////
+#tutorCard{
+
+}
+#tutorImage{
+
+}
+#tutorInformation{
+
+}
+#tutorBio{
+
+}
+#tutorRate{
+
+}
