@@ -12,11 +12,16 @@ import React, { Link, Switch, Route } from 'react-router-dom'
 import StudentNav from './component/StudentNavBar'
 ///////////////////////////////////////////////////////
 
+import { useState } from 'react';
 
 
 
 
 function App() {
+
+  const [usertype, setUsertype] = useState(0)
+
+
    return (
      <div> 
        <StudentNav />
@@ -31,7 +36,7 @@ function App() {
          <TutorRequstes />
         </Route>
        <Route exact path="/">
-         <Login  />
+          <Login setUsertype={setUsertype} usertype={usertype} />
         </Route>
         <Route exact path="/student/tutorList">
             <TutorList />
