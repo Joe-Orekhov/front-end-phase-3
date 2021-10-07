@@ -93,12 +93,30 @@ function Login({ setUsertype, usertype,}){
     }
   }
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-
   return(
     <div>
       <h1>LOGIN</h1>
       <div>
+
+        <ButtonDropdown isOpen={dropDownOpen} toggle={toggle}>
+          <DropdownToggle caret>Login</DropdownToggle>
+          <DropdownMenu>
+          <DropdownItem header>HEADER</DropdownItem>
+            <DropdownItem>Student</DropdownItem>
+            <DropdownItem>Tutor</DropdownItem>
+          </DropdownMenu>
+        </ButtonDropdown> */}
+
+        <form onSubmit={e => handleSubmit(e)}>
+          <button onClick={() => setUsertype(1)}>Student</button>
+          <button onClick={() => setUsertype(2)}>Tutor</button> */}
+          <input id="username" name="username" onChange={(e)=>setUserPass(e.target.value)}></input>
+          <input id="password" name="password" onChange={(e)=>setUsername(e.target.value)}></input>
+          <button>login</button>
+          <button>Sign up</button>
+        </form>
+
+
         <DisplayLogin StudentHandleSubmit={StudentHandleSubmit} tutorHandleSubmit={tutorHandleSubmit}/>
         
       </div>
