@@ -32,7 +32,7 @@ function Login({ handleUserID }) {
     }
 
   return(
-    <div >
+    <div>
       <h1 id="loginHeader">LOGIN</h1>
       <div id="loginForm">
         <form onSubmit={handleSubmit}>

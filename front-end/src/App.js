@@ -27,7 +27,7 @@ function App() {
         <Route exact path="/sign_up"><SignUp /></Route>
         <Route exact path="/tutor/profile"><TutorProfile /></Route>
         <Route exact path="/tutor/requests"><TutorRequests /></Route>
-        <Route exact path="/student"><StudentSchedule userId={userId} /></Route>
+        <Route exact path="/student/schedule"><StudentSchedule userId={userId} /></Route>
         <Route exact path="/student/profile"><StudentProfile userId={userId} /></Route>
         <Route exact path="/student/tutorlist"><TutorList userId={userId} /></Route>
       </Switch>
