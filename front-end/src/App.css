@@ -415,7 +415,7 @@
   font-family: "Papyrus";
   font-weight: bold;
   margin:30px;
-  color: rgb(91, 131, 241);
+  color: rgb(0, 30, 114);
   background-color: rgb(237, 234, 234);
 }
 .nav-tab:hover{
@@ -428,10 +428,28 @@
   margin-right: auto;
   padding: 5px;
   text-align: center;
-
   background: rgb(238, 179, 70);
   background-clip: margin-box;
 }
 
+#acornLogo{
+  position: absolute;
+  width: 100px;
+  left: 20px;
+  transform: rotate(45deg);
+  animation: shake infinite 5s linear;
+}
 
+#logoDiv{
+width: 500px
+}
 
+#acornPhrase{
+position: absolute;
+font-family: "Papyrus";
+left: 100px;
+font-weight: bold;
+font-size: 20px;
+top: 15px;
+text-shadow:  2px 2px rgb(201, 132, 41);
+}
