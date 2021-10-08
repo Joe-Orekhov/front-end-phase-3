@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 
-function Login({ handleUserID }) {
+function Login({  }) {
   const [ userpass, setUserPass] = useState('')
   const [ username, setUsername] = useState('')
   const [ allUser,  setAllUser ] = useState([])
