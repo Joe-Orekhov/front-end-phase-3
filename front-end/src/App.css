@@ -250,6 +250,7 @@
 .column2{
   float: right;
   margin-right: 200px;
+  padding-left: 50px
 }
 
 .edit-button{
@@ -287,7 +288,7 @@
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  padding-bottom: 50px
+  padding-bottom: 50px;
 }
 
 .edit-profile-input{
@@ -441,7 +442,7 @@
 }
 
 #logoDiv{
-width: 500px
+width: 500px;
 }
 
 #acornPhrase{
@@ -452,6 +453,7 @@ font-weight: bold;
 font-size: 20px;
 top: 15px;
 text-shadow:  2px 2px rgb(201, 132, 41);
+}
 /* /////////// STUDENT SCHEDULE /////////// */
 
 .student-schedule{
@@ -467,4 +469,11 @@ text-shadow:  2px 2px rgb(201, 132, 41);
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.profile-image{
+  width: 270px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 360px;
 }

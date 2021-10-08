@@ -19,7 +19,7 @@ function StudentProfile({userId}) {
     <div class="row">
       <div class="column1">
         <h2>Name: {studentInfo.name}</h2>
-        <img src={studentInfo.img} alt="studentpic" width="60%"/>
+        <img src={studentInfo.img} alt="studentpic" className="profile-image"/>
         <p>Grade: {studentInfo.grade}</p>
         <p>Age: {studentInfo.age}</p>
         <p>TimeZone: {studentInfo.timezone}</p>
