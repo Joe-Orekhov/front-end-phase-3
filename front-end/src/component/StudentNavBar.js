@@ -6,11 +6,11 @@ function StudentNavBar() {
   return(
     <div>
       <h1>Student Nav Bar</h1>
-        <button><Link to="/">Login</Link></button>
-        <button><Link to="/sign_up">Sign Up</Link></button>
-        <button><Link to="/student/schedule">My Schedule</Link></button>
-        <button><Link to="/student/profile">My Profile</Link></button>
-        <button><Link to="/student/tutorList">Tutor List</Link></button>
+      <Link to="/"><button>Login</button></Link>
+      <Link to="/sign_up"><button>Sign Up</button></Link>
+      <Link to="/sign_up"><button>My Schedule</button></Link>
+      <Link to="/sign_up"><button>My Profile</button></Link>
+      <Link to="/sign_up"><button>Tutor List</button></Link>
     </div>
   )
 }

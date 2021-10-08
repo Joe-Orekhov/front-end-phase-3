@@ -37,6 +37,7 @@
   }
 }
 
+/* /////////////LOGIN////////////// */
 #loginForm{
   position: absolute;
   width: 100%;
@@ -95,19 +96,22 @@
   grid-template-columns: repeat(1, 1fr);
   justify-content: space-evenly;
   width: 75%;
-  gap: 10px;
+  gap: 30px;
   margin: auto;
-  left: 25%;
+  left: 13%;
 }
 
 #tutorCard{
-  border: 1px solid rgb(255, 0, 0);
   position: relative;
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-evenly;
   gap: 30px;
   height: 300px;
+  background-color: rgb(241, 189, 91);
+  border: 1px solid rgb(250, 187, 71);
+  box-shadow:  10px 10px 12px rgb(187, 187, 187);
+  border-radius: 5px;
 }
 
 #tutorImage{
@@ -116,7 +120,10 @@
   position: relative;
   top: 5px;
   left: 5%;
+  border: rgb(139, 91, 46);
+  border-style: solid;
 }
+
 #tutorInformation{
   display: inline-grid;
   grid-template-columns: repeat(1, 1fr);
@@ -126,8 +133,24 @@
 #tutorBio{
   position: relative;
   top: 20px;
-  border: 1px solid rgb(87, 116, 143);
-  height: 150px;
+  height: fit-content;
+  padding: 10px;
+  background-color: rgb(240, 210, 172);
+  box-shadow:   10px 10px 10px rgb(216, 175, 120);
+  border-radius: 30px;
+}
+#triangle{
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid rgb(240, 210, 172);
+  width: 130px;
+  top: 90px;
+  left: 240px;
+  border-radius: 30px;
+  transform: rotate(178deg);
 }
 
 #tutorRate{
@@ -135,7 +158,8 @@
   font-size: 40px;
   font-family: "Papyrus";
   font-weight: bolder;
-  top: 30px;
+  top:12px;
+  left: 5px;
   margin: 0px;
 }
 
@@ -156,4 +180,109 @@
 
 #tutorInformation{
   margin: 1px;
+}
+
+
+#acornImage{
+  position: relative;
+  z-index: 1;
+  width: 200px;
+  transform: rotate(-15deg);
+  animation: shake 3s infinite;
+  bottom: 20px;
+}
+
+#acornImage:hover{
+  animation: spin 0.5s infinite;
+  cursor: pointer;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 85% {
+    transform: translate3d(-1px, 0, 0);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* /////////////TUTOR REQUEST////////////// */
+#requestTutorButt{
+  background-color: rgb(238, 224, 143);
+  height: 220px;
+  width: 221px;
+  border-radius: 5px;
+  font-family: "Papyrus";
+  font-weight: bold;
+  font-size: 31px;
+}
+
+#requestTutorButt:hover{
+  background-color: rgb(151, 238, 143);
+  cursor: pointer;
+}
+
+#requestForm{
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: space-evenly;
+  gap: 10px;
+  top: 10px;
+}
+
+.requestInput{
+  background-color: rgb(255, 228, 155);
+  width: 200px;
+  border-style: none;
+  border-radius: 5px;
+  height: 20px;
+}
+.requestInput:hover{
+  background-color: rgb(255, 239, 196);
+  width: 200px;
+  border-style: none;
+  border-radius: 5px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#closeForm{
+  position: relative;
+  background-color: rgb(182, 38, 38);
+  border-radius: 100px;
+  left: 180px;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+}
+
+#closeForm:hover{
+  background-color: rgb(228, 29, 29);
+  cursor: pointer;
+}
+
+#confirmRequest{
+  position: relative;
+  top: 10px;
+  background-color: rgb(101, 223, 107);
+  border-radius: 5px;
+  border-style: none;
+  width: 200px;
+  height: 40px;
+}
+
+#confirmRequest:hover{
+  cursor: pointer;
+  background-color: rgb(88, 243, 96);
 }

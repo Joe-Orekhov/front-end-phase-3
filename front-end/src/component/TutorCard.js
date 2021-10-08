@@ -41,6 +41,11 @@ function TutorCard({ tutor }) {
         <h2 id="tutorName">{tutor.name}</h2>
         <img id="tutorImage" src={tutor.img} alt="tutorpic" />
       </div>
+      <div>
+        <div id='triangle' ></div>
+      <p id="tutorBio">{tutor.bio}</p>
+      <img id="acornImage"src="https://images.vexels.com/media/users/3/219088/isolated/preview/e4315dc90cf3a5ccc2ece245e5973075-acorns-branch-hand-drawn.png" alt="Acorn"></img>
+      </div> 
         <div id="tutorInformation">
           <div>
           <p><span className='infoHeader'>Gender: </span>{tutor.gender}</p>
@@ -52,31 +57,43 @@ function TutorCard({ tutor }) {
           <p><span className='infoHeader'>Availability: </span>{tutor.availability}</p>
           </div>
         </div>
-       <div>
-      <p id="tutorBio">Bio: {tutor.bio}</p>
-      <p id="tutorRate">Rate: ${tutor.rate}</p>
-      </div> 
       {showForm ? 
       <div>
-        <button onClick={handleRequestClick}>Close Request</button>
-        <form onSubmit={handleRequestSubmit, handleRequestClick}>
-          <label>Subject </label>
-          <input type="text" name="subject" />
-          <label>Schedule </label>
-          <input type="text" name="schedule" />
-          <label>Online/In-Person</label>
-          <select name="online_in_person">
-            <option>Online</option>
-            <option>In-Person</option>
-            <option>Both</option>
-          </select>
-          <label>Location</label>
-          <input type="text" name="location" />
-          <button>Confirm Request</button>
+        
+        <div><button id='closeForm' onClick={handleRequestClick}>X</button></div>
+        <form id='requestForm' onSubmit={handleRequestSubmit, handleRequestClick}>
+          <div id='requestForm'>
+            <div>
+              <label>Subject </label><br/>
+              <input className='requestInput' type="text" name="subject" />
+            </div>
+            <div>
+              <label>Schedule </label><br/>
+              <input className='requestInput' type="text" name="schedule" />
+            </div>
+            <div>
+              <label>Online/In-Person</label><br/>
+              <select className='requestInput' name="online_in_person">
+                <option>Online</option>
+                <option>In-Person</option>
+                <option>Both</option>
+              </select>
+            </div>
+            <div>
+              <label>Location</label><br/>
+              <input className='requestInput' type="text" name="location" />
+            </div>
+          </div>
+          <div>
+            <button id="confirmRequest">Confirm Request</button>
+          </div>
         </form>
       </div>
       :
-      <button onClick={handleRequestClick}>Request Tutor</button>
+      <div>
+        <button id='requestTutorButt' onClick={handleRequestClick}>Request Tutor</button>
+        <p id="tutorRate">Rate: ${tutor.rate}</p>
+      </div>
       }
     </div>
   )}
