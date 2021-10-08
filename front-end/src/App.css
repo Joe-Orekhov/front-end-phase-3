@@ -292,7 +292,6 @@ body{
   cursor: pointer;
   background-color: rgb(88, 243, 96);
 }
-
 .nav-tab {
   border: none;
   padding: 10px 12px;
@@ -317,7 +316,9 @@ body{
   margin-right: auto;
   padding: 5px;
   text-align: center;
+
   background: rgb(238, 179, 70);
   background-clip: margin-box;
 }
+
 

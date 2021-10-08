@@ -11,6 +11,7 @@ function StudentNavBar() {
       <Link to="/student/schedule"><button className="nav-tab">My Schedule</button></Link>
       <Link to="/student/profile"><button className="nav-tab">My Profile</button></Link>
       <Link to="/student/tutorlist"><button className="nav-tab">Tutor List</button></Link>
+
     </div>
   )
 }
