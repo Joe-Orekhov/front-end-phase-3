@@ -6,7 +6,6 @@ function Login({ handleUserID }) {
   const [ userpass, setUserPass] = useState('')
   const [ username, setUsername] = useState('')
   const [ allUser,  setAllUser ] = useState([])
-  const [ ID, setID ] = useState('0')
   
   useEffect(()=>{
       fetch('http://localhost:9292/students')
