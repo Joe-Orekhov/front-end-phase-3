@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
+
 import TutorCard from "./TutorCard"
+
 
 function TutorList() {
   const [tutors, setTutors] = useState([])
@@ -10,7 +12,13 @@ function TutorList() {
     .then(setTutors)
   },[])
 
+
+
+
+  
+
   const eachTutor = tutors.map(tutor =>
+
     <TutorCard 
       tutor={tutor}
       key={tutor.id}

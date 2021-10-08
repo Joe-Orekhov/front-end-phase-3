@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import StudentRequests from "./StudentRequests"
 
 function StudentSchedule({userId}) {
   const [matches, setMatches] = useState([])
@@ -10,25 +11,29 @@ function StudentSchedule({userId}) {
     .then(setMatches)
   },[])
 
+function handleDeleteMatch(matchToDelete) {
+  setMatches(matches.filter(match => match.id !== matchToDelete.id))
+}
+
     // need to figure out how to get tutor names from student_id
     const eachTutor = matches.map(match =>
-      <div key={match.id}>
-        <h4>Tutor Name: {match.tutor_id}</h4>
-        <p>Subject: {match.subject}</p>
-        <p>Online/In-Person: {match.online_in_person}</p>
-        <p>Location: {match.location}</p>
-        <p>Schedule: {match.schedule}</p>
-      </div>
-      )
 
+      <StudentRequests 
+      key={match.id}
+      match={match}
+      handleDeleteMatch={handleDeleteMatch}
+      />
+      )
 
   return(
     <div>
       
       <h1>Student Schedule</h1>
       {eachTutor}
+      
     </div>
   )
 }
+
 
 export default StudentSchedule;
