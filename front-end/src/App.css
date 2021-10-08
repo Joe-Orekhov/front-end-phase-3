@@ -37,6 +37,10 @@
   }
 }
 
+body{
+  background-image: url('https://mainetree.org/wp-content/uploads/2020/11/leaf-graphic-transparent_ICON.png');
+}
+
 /* /////////////LOGIN////////////// */
 #loginForm{
   position: absolute;
@@ -99,6 +103,7 @@
   gap: 30px;
   margin: auto;
   left: 13%;
+  top: 40px;
 }
 
 #tutorCard{
@@ -108,8 +113,8 @@
   justify-content: space-evenly;
   gap: 30px;
   height: 300px;
-  background-color: rgb(241, 189, 91);
-  border: 1px solid rgb(250, 187, 71);
+  background-color: rgb(102, 153, 211);
+  border: 1px solid rgb(67, 130, 201);
   box-shadow:  10px 10px 12px rgb(187, 187, 187);
   border-radius: 5px;
 }
@@ -120,7 +125,7 @@
   position: relative;
   top: 5px;
   left: 5%;
-  border: rgb(139, 91, 46);
+  border: rgb(36, 80, 131);
   border-style: solid;
 }
 
@@ -136,7 +141,7 @@
   height: fit-content;
   padding: 10px;
   background-color: rgb(240, 210, 172);
-  box-shadow:   10px 10px 10px rgb(216, 175, 120);
+  box-shadow:   10px 10px 10px rgb(63, 114, 173);
   border-radius: 30px;
 }
 #triangle{
@@ -182,7 +187,6 @@
   margin: 1px;
 }
 
-
 #acornImage{
   position: relative;
   z-index: 1;
@@ -218,7 +222,9 @@
 
 /* /////////////TUTOR REQUEST////////////// */
 #requestTutorButt{
-  background-color: rgb(238, 224, 143);
+  position: relative;
+  top: 15px;
+  background-color:rgb(243, 205, 156);
   height: 220px;
   width: 221px;
   border-radius: 5px;
@@ -286,3 +292,32 @@
   cursor: pointer;
   background-color: rgb(88, 243, 96);
 }
+
+.nav-tab {
+  border: none;
+  padding: 10px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  border-radius: 5px;
+  font-family: "Papyrus";
+  font-weight: bold;
+  margin:30px;
+  color: rgb(91, 131, 241);
+  background-color: rgb(237, 234, 234);
+}
+.nav-tab:hover{
+  box-shadow: 5px 5px 15px rgb(223, 148, 50);
+  background-color: rgb(255, 255, 255);
+}
+.navbar {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  text-align: center;
+  background: rgb(238, 179, 70);
+  background-clip: margin-box;
+}
+

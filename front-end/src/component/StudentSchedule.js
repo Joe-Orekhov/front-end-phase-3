@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import StudentRequests from "./StudentRequests"
 
-function StudentSchedule({userId}) {
+function StudentSchedule({ userId }) {
   const [matches, setMatches] = useState([])
 
   
@@ -9,7 +9,7 @@ function StudentSchedule({userId}) {
     fetch(`http://localhost:9292/students/${userId}/tutors`)
     .then(res => res.json())
     .then(setMatches)
-  },[userId])
+  },[])
 
 function handleDeleteMatch(matchToDelete) {
   setMatches(matches.filter(match => match.id !== matchToDelete.id))
