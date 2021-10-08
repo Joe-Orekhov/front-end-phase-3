@@ -37,19 +37,25 @@ function TutorCard({ tutor }) {
 
   return(
     <div id="tutorCard">
-      <h2>Name: {tutor.name}</h2>
-      <img id="tutorImage" src={tutor.img} alt="tutorpic" width="400" height="400" />
+      <div>
+        <h2 id="tutorName">{tutor.name}</h2>
+        <img id="tutorImage" src={tutor.img} alt="tutorpic" />
+      </div>
         <div id="tutorInformation">
-          <p>Gender: {tutor.gender}</p>
-          <p>Subjects: {tutor.subjects}</p>
-          <p>Location: {tutor.location}</p>
-          <p>TimeZone: {tutor.timezone}</p>
-          <p>Online/In-Person: {tutor.online_in_person}</p>
-          <p>Availability: {tutor.availability}</p>
-          <p>Background Check: {tutor.background_check}</p>
+          <div>
+          <p><span className='infoHeader'>Gender: </span>{tutor.gender}</p>
+          <p><span className='infoHeader'>Background Check: </span>{tutor.background_check}</p>
+          <p><span className='infoHeader'>Online/In-Person: </span>{tutor.online_in_person}</p>
+          <p><span className='infoHeader'>Subjects: </span>{tutor.subjects}</p>
+          <p><span className='infoHeader'>Location: </span>{tutor.location}</p>
+          <p><span className='infoHeader'>TimeZone: </span>{tutor.timezone}</p>
+          <p><span className='infoHeader'>Availability: </span>{tutor.availability}</p>
+          </div>
         </div>
+       <div>
       <p id="tutorBio">Bio: {tutor.bio}</p>
       <p id="tutorRate">Rate: ${tutor.rate}</p>
+      </div> 
       {showForm ? 
       <div>
         <button onClick={handleRequestClick}>Close Request</button>
