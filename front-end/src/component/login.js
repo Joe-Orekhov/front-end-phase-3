@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'
 // import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 
@@ -41,7 +40,6 @@ console.log(selectUsername)
           <input className="logFormPass" name="password" placeholder="Password" onChange={(e)=>setUserPass(e.target.value)}></input><br/>
           <button className="logFormButt">Login</button>
         </form>
-
       </div>
     </div>
   )

@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 
-function StudentNavBar({}) {
+function StudentNavBar() {
 
 
   return(
     <div>
       <h1>Student Nav Bar</h1>
-
+        <button><Link to="/sign_up">Sign Up</Link></button>
         <button><Link to="/student/schedule">My Schedule</Link></button>
         <button><Link to="/student/profile">My Profile</Link></button>
         <button><Link to="/student/tutorList">Tutor List</Link></button>
