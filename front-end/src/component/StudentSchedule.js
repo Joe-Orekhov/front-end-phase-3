@@ -12,7 +12,7 @@ function StudentSchedule({userId}) {
 
     // need to figure out how to get tutor names from student_id
     const eachTutor = matches.map(match =>
-      <div>
+      <div key={match.id}>
         <h4>Tutor Name: {match.tutor_id}</h4>
         <p>Subject: {match.subject}</p>
         <p>Online/In-Person: {match.online_in_person}</p>
