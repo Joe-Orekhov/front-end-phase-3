@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
 import StudentRequests from "./StudentRequests"
 
-function StudentSchedule() {
+function StudentSchedule({userId}) {
   const [matches, setMatches] = useState([])
 
+  
   useEffect(() => {
-    fetch("http://localhost:9292/students/1/tutors")
+    fetch(`http://localhost:9292/students/${userId}/tutors`)
     .then(res => res.json())
     .then(setMatches)
   },[])
@@ -16,6 +17,7 @@ function handleDeleteMatch(matchToDelete) {
 
     // need to figure out how to get tutor names from student_id
     const eachTutor = matches.map(match =>
+
       <StudentRequests 
       key={match.id}
       match={match}
