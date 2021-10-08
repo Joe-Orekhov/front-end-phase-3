@@ -1,34 +1,33 @@
 import React from 'react';
 
-function StudentRequests ( { request, handleDeleteRequest } ) {
+
+function StudentRequests ( { match, handleDeleteMatch } ) {
     
 
-function handleDeleteClick(){
-    fetch(`http://localhost:9292/tutors/delete_request/${request.id}`, {
+function handleDeleteClick() {
+    fetch(`http://localhost:9292/students/delete-match/${match.id}`, {
         method: "DELETE"
-       
     })
         .then((r) => r.json())
-        .then(() => console.log(request))
-
-    }
+        .then((data) => {
+            debugger
+            handleDeleteMatch(match)
+        })
+}
 
     
-
-
 return (
     <div>
-    <h4>Student Name: {request.student_id}</h4>
-        <p>Subject: {request.subject}</p>
-        <p>Online/In-Person: {request.online_in_person}</p>
-        <p>Location: {request.location}</p>
-        <p>Schedule: {request.schedule}</p>
-        <button>Accept Request?</button>
-        <button className="del-btn" onClick={() => handleDeleteClick(request)}>
-        Delete Tutor
-        </button>
-    </div>
-)
+    <h4>Tutor Name: {match.tutor_id}</h4>
+    <p>Subject: {match.subject}</p>
+    <p>Online/In-Person: {match.online_in_person}</p>
+    <p>Location: {match.location}</p>
+    <p>Schedule: {match.schedule}</p>
+    <button className="del-btn" onClick={handleDeleteClick}>
+    Delete Match
+    </button>
+  </div>
+    )
 
 }
 

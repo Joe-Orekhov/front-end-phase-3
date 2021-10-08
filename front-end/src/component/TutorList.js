@@ -1,4 +1,9 @@
 import { useEffect, useState } from "react"
+import StudentRequests from "./StudentRequests"
+
+
+
+
 
 function TutorList() {
   const [tutors, setTutors] = useState([])
@@ -8,6 +13,11 @@ function TutorList() {
     .then(res => res.json())
     .then(setTutors)
   },[])
+
+
+
+
+  
 
   const eachTutor = tutors.map(tutor =>
     <div id="tutorCard">
@@ -24,6 +34,7 @@ function TutorList() {
         </div>
       <p id="tutorBio">Bio: {tutor.bio}</p>
       <p id="tutorRate">Rate: ${tutor.rate}</p>
+      
     </div>
   )
 
