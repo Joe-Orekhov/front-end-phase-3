@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react"
 
-function StudentSchedule() {
+function StudentSchedule({userId}) {
   const [matches, setMatches] = useState([])
 
+  
   useEffect(() => {
-    fetch("http://localhost:9292/students/1/tutors")
+    fetch(`http://localhost:9292/students/${userId}/tutors`)
     .then(res => res.json())
     .then(setMatches)
   },[])

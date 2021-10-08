@@ -10,7 +10,6 @@ function TutorList() {
     .then(setTutors)
   },[])
 
-
   const eachTutor = tutors.map(tutor =>
     <TutorCard 
       tutor={tutor}
@@ -21,7 +20,9 @@ function TutorList() {
   return(
     <div>
       <h1>Tutor List</h1>
-      {eachTutor}
+      <div id="tutorCardHome">
+        {eachTutor}
+      </div>
     </div>
   )
 }

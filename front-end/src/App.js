@@ -15,24 +15,21 @@ import StudentNavBar from './component/StudentNavBar'
 
 function App() {
 
-  const [ selectUserID, SetSelectUserID ] = useState({})
-  const handleUserID = (userID) =>{
-    SetSelectUserID(userID)
-  }
+  const userId = localStorage.getItem('userID');
 
-  console.log(selectUserID)
    return (
      <div> 
       <StudentNavBar />
       {/* <TutorNavBar /> */}
       <Switch>
-        <Route exact path="/"><Login handleUserID={handleUserID}/></Route>
+
+        <Route exact path="/"><Login /></Route>
         <Route exact path="/sign_up"><SignUp /></Route>
         <Route exact path="/tutor/profile"><TutorProfile /></Route>
         <Route exact path="/tutor/requests"><TutorRequests /></Route>
-        <Route exact path="/student/schedule"><StudentSchedule /></Route>
-        <Route exact path="/student/profile"><StudentProfile selectUserID={selectUserID}/></Route>
-        <Route exact path="/student/tutorlist"><TutorList /></Route>
+        <Route exact path="/student"><StudentSchedule userId={userId} /></Route>
+        <Route exact path="/student/profile"><StudentProfile userId={userId} /></Route>
+        <Route exact path="/student/tutorlist"><TutorList userId={userId} /></Route>
       </Switch>
     </div>
    )
