@@ -24,8 +24,8 @@ function handleDeleteMatch(matchToDelete) {
       )
 
   return(
-    <div>
-      <h1>Student Schedule</h1>
+    <div className="student-schedule">
+      <h1>MY SCHEDULE</h1>
       {eachTutor}
     </div>
   )
