@@ -31,8 +31,10 @@ function Login() {
     }
 
   return(
+
     <div id="login">
       <h1>LOGIN</h1>
+
       <div id="loginForm">
         <form onSubmit={handleSubmit}>
           <input className="logFormUser" name="username" placeholder="Username" onChange={(e)=>setUsername(e.target.value)}></input><br/>
