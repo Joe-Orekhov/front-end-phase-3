@@ -30,13 +30,13 @@ function SignUp() {
   }
 
   return(
-    <div>
-      <h1>Sign Up:</h1>
-      <form onSubmit={handleSignUpSubmit}>
+    <div className="sign-up">
+      <h1>SIGN UP</h1>
+      <form onSubmit={handleSignUpSubmit} className="sign-up-form">
         <label>Name </label>
-        <input type="text" name="name" placeholder="Name..." />
+        <input className="sign_up_form_input" type="text" name="name" placeholder="Name..." />
         <label>Grade </label>
-        <select name="grade">
+        <select className="sign_up_form_input" name="grade">
           <option>Pre-K</option>
           <option>Kindergarten</option>
           <option>First</option>
@@ -59,21 +59,21 @@ function SignUp() {
           <option>Bootcamp</option>
         </select>
         <label>Age </label>
-        <input type="text" name="age" placeholder="Age..." />
+        <input className="sign_up_form_input" type="text" name="age" placeholder="Age..." />
         <label>TimeZone </label>
-        <select name="timezone">
+        <select className="sign_up_form_input" name="timezone">
           <option>PST</option>
           <option>MST</option>
           <option>CST</option>
           <option>EST</option>
         </select>
         <label>Username </label>
-        <input type="text" name="username" placeholder="Username..." />
+        <input className="sign_up_form_input" type="text" name="username" placeholder="Username..." />
         <label>Password </label>
-        <input type="text" name="password" placeholder="Password..." />
+        <input className="sign_up_form_input" type="text" name="password" placeholder="Password..." />
         <label>Your Photo </label>
-        <input type="text" name="img" placeholder="Image URL..." />
-        <button>Create Account</button>
+        <input className="sign_up_form_input" type="text" name="img" placeholder="Image URL..." />
+        <button className="sign-up-form-button">Create Account</button>
       </form>
     </div>
   )

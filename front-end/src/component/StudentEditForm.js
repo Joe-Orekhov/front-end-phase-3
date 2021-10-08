@@ -27,20 +27,19 @@ const EditForm = ({studentInfo, userId, setStudentInfo}) => {
 
 
   return(
-    <div id="editForm">
-
-      <form onSubmit={handleNewForm}>
+    <div>
+      <form className="edit-profile-form"onSubmit={handleNewForm}>
         <p>Name:</p>
-        <input type="text" name="name" ></input><br/>
+        <input className="edit-profile-input" type="text" name="name" ></input><br/>
         <p>Image:</p>
-        <input type="text"  name="img" ></input><br/>
+        <input className="edit-profile-input" type="text"  name="img" ></input><br/>
         <p>Grade:</p>
-        <input type="text" name="grade" ></input><br/>
+        <input className="edit-profile-input" type="text" name="grade" ></input><br/>
         <p>Age:</p>
-        <input type="number"  name="age" ></input><br/>
+        <input className="edit-profile-input" type="number"  name="age" ></input><br/>
         <p>TimeZone:</p>
-        <input type="text" name="timezone" ></input><br/>
-        <button type="submit">submit</button>
+        <input className="edit-profile-input" type="text" name="timezone" ></input><br/>
+        <button type="submit" className="edit-form-submit-bttn">submit</button>
       </form>
 
     </div>

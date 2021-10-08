@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 
-function Login({  }) {
+function Login() {
   const [ userpass, setUserPass] = useState('')
   const [ username, setUsername] = useState('')
   const [ allUser,  setAllUser ] = useState([])
@@ -31,8 +31,9 @@ function Login({  }) {
     }
 
   return(
-    <div>
-      <h1 id="loginHeader">LOGIN</h1>
+
+    <div id="login">
+      <h1>LOGIN</h1>
       <div id="loginForm">
         <form onSubmit={handleSubmit}>
           <input className="logFormUser" name="username" placeholder="Username" onChange={(e)=>setUsername(e.target.value)}></input><br/>
